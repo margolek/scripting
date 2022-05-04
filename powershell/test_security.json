@@ -3,12 +3,12 @@
     "test-suite":
     [
         {
-            "order": 1,
+            "order": 2,
             "test-suite-name":"TC_L4_SYNCH",
             "tags": ["regression-tests","production-tests"]
         },
         {
-            "order": 2,
+            "order": 1,
             "test-suite-name":"TC_L4_SYNCH_TEST",
             "tags":["production-tests"]
         }

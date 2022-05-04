@@ -1,25 +1,11 @@
-# $configuration_directory = "C:\Users\PLSLSER\OneDrive - ABB\Documents\github\scripting\powershell\test_security.json"
-$configuration_directory = "C:\Users\margo\OneDrive\Dokumenty\GitHub\scripting\powershell\test_security.json"
+$configuration_directory = "C:\Users\PLSLSER\OneDrive - ABB\Documents\github\scripting\powershell\test_security.json"
+# $configuration_directory = "C:\Users\margo\OneDrive\Dokumenty\GitHub\scripting\powershell\test_security.json"
 $json_object = Get-Content $configuration_directory | ConvertFrom-Json -AsHashtable
-$json_object["test-suite"][0]
+# $json_object["test-suite"]
 
-#Arrays
-$colorPicker = @('blue', 'white','yellow')
-# $colorPicker
+$json_sorted = $json_object["test-suite"] | Sort-Object { $_.order }
 
-$colorPicker2 = [System.Collections.ArrayList]@('blue', 'white','yellow')
-# $colorPicker2
+Foreach ($item in $json_sorted) {
+    Write-output $item.tags
+     }
 
-$users = @{
-    abertram = 'Adam Bertman'
-    raquelcer = 'Raquel Cerillo'
-    zheng21 = 'Justin Zghen'
-}
-
-# $users
-
-# $myFirstCustomObject = New-Object -TypeName PSCustomObject
-# $myFirstCustomObject = [PSCustomObject]@{OSBuild = 'x'; OSVersion = 'y'}
-# Get-Member -InputObject $myFirstCustomObject$
-
-#Sort array object
