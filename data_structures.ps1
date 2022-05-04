@@ -1,6 +1,7 @@
-$configuration_directory = "C:\Users\PLSLSER\OneDrive - ABB\Documents\github\scripting\powershell\test_security.json"
+# $configuration_directory = "C:\Users\PLSLSER\OneDrive - ABB\Documents\github\scripting\powershell\test_security.json"
+$configuration_directory = "C:\Users\margo\OneDrive\Dokumenty\GitHub\scripting\powershell\test_security.json"
 $json_object = Get-Content $configuration_directory | ConvertFrom-Json -AsHashtable
-# $json_object
+$json_object["test-suite"][0]
 
 #Arrays
 $colorPicker = @('blue', 'white','yellow')
@@ -15,4 +16,10 @@ $users = @{
     zheng21 = 'Justin Zghen'
 }
 
-$users
+# $users
+
+# $myFirstCustomObject = New-Object -TypeName PSCustomObject
+# $myFirstCustomObject = [PSCustomObject]@{OSBuild = 'x'; OSVersion = 'y'}
+# Get-Member -InputObject $myFirstCustomObject$
+
+#Sort array object
